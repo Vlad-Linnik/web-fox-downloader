@@ -1,0 +1,52 @@
+body{
+  background-color: #333333;
+}
+.container {
+  width: 40%;
+  margin: auto;
+}
+.dTimer{
+  margin: auto;
+  background-color: #292929;
+  width: 70%;
+}
+h1{
+  text-align: center;
+  margin-bottom: 10px;
+}
+.ptimer{
+  font-size: 30px;
+  font-family: "Consolas";
+  text-align: center;
+  color: rgb(0, 255, 255);
+  margin-top: 5px;
+  
+}
+.test{
+  font-size: 30px;
+  font-family: "Consolas";
+}
+.button{
+  border: 10px solid black;
+  border-radius:100px;
+  width: 100px;
+  background-color: darkred;
+  display: inline-block;
+  margin-left: 6%;
+  vertical-align: middle;
+  font-size: 24px;
+  font-family: "Consolas";
+  text-align: center;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.button:hover{
+  border: 10px solid white;
+}
+.button:active{
+  transform: translateY(4px);
+}
