@@ -26,6 +26,8 @@ function myTimer(){
 		seconds = seconds < 10 ? '0' + seconds : seconds;
 		timer_elem.innerHTML = `${minutes}:${seconds}`;
 		timer--;
+		let link = JSON.parse(httpGet("https://randomfox.ca/floof/"))["image"];
+		console.log(link);
 		if (timer == -1) {
 			timer = 600;
 		}
@@ -43,8 +45,8 @@ document.getElementsByClassName("button")[2].addEventListener('click',function()
 	console.log("skip");
 	timerIsWorking = true;
 	timer = 600;
-	//let link = JSON.parse(httpGet("https://randomfox.ca/floof/"))["image"];
-	//console.log(link);
+	let link = JSON.parse(httpGet("https://randomfox.ca/floof/"))["image"];
+	console.log(link);
 	//downloadURI(link , "asd.jpg"); - not working
 	xhr.send(data);
 });
