@@ -14,10 +14,12 @@ function downloadURI(uri, name) {
   document.body.removeChild(link);
   delete link;
 }
-let timer = 600;
+let start_of_timer = 600; //600 sec = 10 min
+let timer = start_of_timer;
 var timer_elem = document.getElementById('p');
 timerIsWorking = true
 const IntervalTimer = setInterval(myTimer,1000);
+
 function myTimer(){
 	if (timerIsWorking){
 		let minutes = Math.floor(timer/60);
@@ -26,10 +28,10 @@ function myTimer(){
 		seconds = seconds < 10 ? '0' + seconds : seconds;
 		timer_elem.innerHTML = `${minutes}:${seconds}`;
 		timer--;
-		let link = JSON.parse(httpGet("https://randomfox.ca/floof/"))["image"];
-		console.log(link);
 		if (timer == -1) {
-			timer = 600;
+			timer = start_of_timer;
+			let link = JSON.parse(httpGet("https://randomfox.ca/floof/"))["image"];
+			console.log(link);
 		}
 	}
 }
